@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Contact Page</h1>
+
+<table class="table table-dark  table-striped">
+    <thead>
+      <tr>
+        
+        <th scope="col">Contact ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in records %}
+      <tr>
+        <th scope="row">{{data.id}}</th>
+      
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+<!--
+{% for data in records %}
+
+<div style="background: chartreuse;border:5px solid red">
+
+ID :     {{data.id}} <br><br>
+
+Name :    {{data.name}} <br><br>
+
+Email ID :    {{data.email}} <br><br>
+
+</div>
+
+{% endfor %}
+-->
+
+
+
+{% endblock %}
